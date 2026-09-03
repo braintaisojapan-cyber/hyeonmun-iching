@@ -17,7 +17,7 @@
   <header><a class="brand" href="#">玄問 <span>현문</span></a><button class="about" id="openGuide">주역 점 보는 법</button></header>
   <main>
     <section class="intro" id="intro">
-      <p class="eyebrow">현문 - 주역의 지혜를 묻다</p>
+      <p class="eyebrow">I CHING · 易經</p>
       <h1>지금, 마음에 품은<br><em>한 가지 질문</em>은 무엇인가요?</h1>
       <p class="lead">답을 정하려 하기보다 상황의 흐름을 바라보세요.<br>질문을 또렷이 적고 천천히 여섯 번의 동전을 던집니다.</p>
       <label class="question-box"><span>나의 질문</span><textarea id="question" maxlength="100" placeholder="예: 지금 시작하려는 일을 어떻게 바라보아야 할까요?"></textarea><small><b id="count">0</b> / 100</small></label>
@@ -33,7 +33,7 @@
     </section>
 
     <section class="result hidden" id="result">
-      <p class="eyebrow">현재의 흐름 · 본괘(本卦)</p>
+      <p class="eyebrow">오늘의 괘 · YOUR READING</p>
       <div class="question-echo" id="questionEcho"></div>
       <div class="result-grid">
         <article class="hex-card">
@@ -42,14 +42,7 @@
         </article>
         <article class="reading"><span class="seal">卦辭</span><h3 id="headline"></h3><p id="interpretation"></p><div class="advice"><b>오늘의 조언</b><p id="advice"></p></div></article>
       </div>
-      <section class="change-flow hidden" id="changing" aria-labelledby="changeTitle">
-        <header class="change-heading"><span>변화의 방향</span><h3 id="changeTitle">본괘에서 변괘로</h3><p>변괘는 본괘의 다른 이름이 아니라, 변효가 움직인 뒤 향하는 흐름입니다.</p></header>
-        <div class="change-steps">
-          <div class="flow-card current"><small>현재의 흐름 · 본괘</small><b id="flowCurrentName"></b><span>지금 놓인 상황과 태도</span></div>
-          <div class="flow-arrow"><i>→</i><strong id="changeSummary"></strong></div>
-          <div class="flow-card future"><small>변화 후의 흐름 · 변괘</small><div class="minihex" id="changedHex"></div><b id="changedName"></b><span id="changedText"></span></div>
-        </div>
-      </section>
+      <div class="changing hidden" id="changing"><span>之卦 · 변화의 방향</span><div><div class="minihex" id="changedHex"></div><p><b id="changedName"></b><small id="changedText"></small></p></div></div>
       <section class="deep-reading">
         <div class="section-title"><span>象</span><div><p>괘의 구조</p><h3>상괘와 하괘가 들려주는 흐름</h3></div></div>
         <div class="trigram-grid"><article><small>上卦 · 바깥의 흐름</small><b id="upperTri"></b><p id="upperMeaning"></p></article><article><small>下卦 · 내면의 바탕</small><b id="lowerTri"></b><p id="lowerMeaning"></p></article></div>
