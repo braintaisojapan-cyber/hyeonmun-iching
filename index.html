@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101815">
+  <title>현문 — 주역의 지혜를 묻다</title>
+  <meta name="description" content="마음을 가다듬고 여섯 번의 동전으로 오늘의 주역 괘를 만나보세요.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="details.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header><a class="brand" href="#">玄問 <span>현문</span></a><button class="about" id="openGuide">주역 점 보는 법</button></header>
+  <main>
+    <section class="intro" id="intro">
+      <p class="eyebrow">I CHING · 易經</p>
+      <h1>지금, 마음에 품은<br><em>한 가지 질문</em>은 무엇인가요?</h1>
+      <p class="lead">답을 정하려 하기보다 상황의 흐름을 바라보세요.<br>질문을 또렷이 적고 천천히 여섯 번의 동전을 던집니다.</p>
+      <label class="question-box"><span>나의 질문</span><textarea id="question" maxlength="100" placeholder="예: 지금 시작하려는 일을 어떻게 바라보아야 할까요?"></textarea><small><b id="count">0</b> / 100</small></label>
+      <button class="primary" id="begin">마음을 가다듬고 시작하기 <span>→</span></button>
+      <p class="privacy">질문은 저장되거나 전송되지 않습니다.</p>
+    </section>
+
+    <section class="casting hidden" id="casting">
+      <div class="progress"><span id="stepText">첫 번째 효</span><i><b id="progressBar"></b></i><small>아래에서 위로 괘를 쌓습니다</small></div>
+      <div class="hex-stage"><div class="hex-lines" id="liveHex"></div><div class="coins" id="coins"><i>乾</i><i>坤</i><i>乾</i></div></div>
+      <p class="cast-note" id="castNote">질문을 마음속으로 한 번 읽고 동전을 던져보세요.</p>
+      <button class="primary" id="toss">동전 던지기 <span>✦</span></button>
+    </section>
+
+    <section class="result hidden" id="result">
+      <p class="eyebrow">오늘의 괘 · YOUR READING</p>
+      <div class="question-echo" id="questionEcho"></div>
+      <div class="result-grid">
+        <article class="hex-card">
+          <div class="hex-symbol" id="finalHex"></div>
+          <p id="hexNo"></p><h2 id="hexName"></h2><div class="hanja" id="hexHanja"></div>
+        </article>
+        <article class="reading"><span class="seal">卦辭</span><h3 id="headline"></h3><p id="interpretation"></p><div class="advice"><b>오늘의 조언</b><p id="advice"></p></div></article>
+      </div>
+      <div class="changing hidden" id="changing"><span>之卦 · 변화의 방향</span><div><div class="minihex" id="changedHex"></div><p><b id="changedName"></b><small id="changedText"></small></p></div></div>
+      <section class="deep-reading">
+        <div class="section-title"><span>象</span><div><p>괘의 구조</p><h3>상괘와 하괘가 들려주는 흐름</h3></div></div>
+        <div class="trigram-grid"><article><small>上卦 · 바깥의 흐름</small><b id="upperTri"></b><p id="upperMeaning"></p></article><article><small>下卦 · 내면의 바탕</small><b id="lowerTri"></b><p id="lowerMeaning"></p></article></div>
+        <p class="structure-reading" id="structureReading"></p>
+      </section>
+      <section class="deep-reading">
+        <div class="section-title"><span>占</span><div><p>분야별 해석</p><h3>질문을 현실에 비추어 보기</h3></div></div>
+        <div class="topic-grid"><article><span>일과 목표</span><p id="workReading"></p></article><article><span>관계와 소통</span><p id="relationReading"></p></article><article><span>재물과 생활</span><p id="moneyReading"></p></article><article><span>마음과 성장</span><p id="mindReading"></p></article></div>
+      </section>
+      <section class="deep-reading hidden" id="movingSection"><div class="section-title"><span>爻</span><div><p>변효 해석</p><h3>변화가 시작되는 자리</h3></div></div><div class="moving-list" id="movingList"></div></section>
+      <section class="reflection"><p>오늘의 성찰 질문</p><blockquote id="reflectionQuestion"></blockquote><small>답을 서두르지 말고, 떠오르는 생각을 한 문장으로 적어보세요.</small></section>
+      <button class="secondary" id="again">새로운 질문으로 다시 보기</button>
+      <p class="disclaimer">주역의 해석은 자신을 돌아보기 위한 사유의 도구입니다. 건강·법률·재정 등 중요한 결정은 전문가의 조언과 현실적인 정보를 함께 고려하세요.</p>
+    </section>
+  </main>
+  <footer><span>玄問 · 현문</span><p>변화의 이치를 통해 나를 비추는 시간</p></footer>
+
+  <dialog id="guide"><button class="close" id="closeGuide" aria-label="닫기">×</button><p class="eyebrow">HOW TO CONSULT</p><h2>좋은 질문이 깊은 통찰을 엽니다</h2><ol><li><b>하나의 주제에 집중하세요.</b><span>“될까요?”보다 “무엇을 살펴야 할까요?”처럼 열어 둔 질문이 좋습니다.</span></li><li><b>여섯 번 동전을 던집니다.</b><span>효는 땅에서 하늘로, 아래에서 위로 쌓입니다.</span></li><li><b>괘를 거울처럼 읽으세요.</b><span>예언이 아니라 현재의 흐름과 태도를 성찰하는 단서로 활용하세요.</span></li></ol></dialog>
+  <script src="app.js"></script>
+</body></html>
