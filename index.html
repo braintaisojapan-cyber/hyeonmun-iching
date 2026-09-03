@@ -11,6 +11,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="details.css">
+  <style>
+    /* 본괘→변괘 안내는 이 문서 안에도 스타일을 두어 단독 업로드 때도 선명하게 보입니다. */
+    .change-flow{display:block;margin:2.5rem 0;padding:2.25rem;border:3px solid #bd8d3f;background:#e9e4d6;color:#101815}
+    .change-flow.hidden{display:none!important}.change-heading{text-align:center;max-width:46rem;margin:0 auto 2rem}
+    .change-heading>span{display:inline-block;padding:.6rem 1rem;background:#bd8d3f;color:#fff;font-size:1rem;font-weight:700;letter-spacing:.08em}
+    .change-heading h3{margin:1rem 0 .65rem;font-size:2rem;line-height:1.35}.change-heading p{margin:0;font-size:1.1rem;line-height:1.8;color:#3f4944}
+    .change-steps{display:grid;grid-template-columns:minmax(0,1fr) 12rem minmax(0,1fr);gap:1.25rem;align-items:stretch}
+    .flow-card{display:flex;min-height:15rem;padding:1.75rem;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,.78);border:2px solid #cfcbbf}
+    .flow-card small{font-size:1.05rem;line-height:1.5;font-weight:700;color:#174f43}.flow-card b{margin:.9rem 0 .65rem;font-size:1.55rem;line-height:1.5}
+    .flow-card span{font-size:1.05rem;line-height:1.7;color:#4f5752}.flow-card .minihex{margin:1rem 0 .35rem;gap:5px}.flow-card .minihex .line{width:78px;height:8px}
+    .flow-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.flow-arrow i{font-size:3.4rem;line-height:1;color:#bd8d3f;font-style:normal}.flow-arrow strong{margin-top:.8rem;font-size:1.15rem;line-height:1.6;color:#101815}
+    @media(max-width:700px){.change-flow{padding:1.6rem 1rem}.change-heading h3{font-size:1.65rem}.change-heading p{font-size:1rem}.change-steps{grid-template-columns:1fr}.flow-card{min-height:12rem}.flow-arrow i{transform:rotate(90deg)}.flow-arrow strong{margin-top:0}}
+  </style>
 </head>
 <body>
   <div class="grain"></div>
