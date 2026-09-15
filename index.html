@@ -49,6 +49,14 @@
     <section class="result hidden" id="result">
       <p class="eyebrow">현재의 흐름 · 본괘(本卦)</p>
       <div class="question-echo" id="questionEcho"></div>
+      <section class="verdict" id="verdict" aria-labelledby="verdictTitle">
+        <p class="verdict-label">질문에 대한 흐름 판단</p>
+        <div class="verdict-badge" id="verdictBadge">조건부 가능</div>
+        <h2 id="verdictTitle">조건을 갖추면 가능합니다</h2>
+        <p id="verdictSummary"></p>
+        <div class="verdict-reasons"><span id="primarySignal"></span><span id="changeSignal"></span><span id="lineSignal"></span></div>
+        <small>확정된 미래가 아니라, 현재 괘와 변효가 보여주는 가능성의 방향입니다.</small>
+      </section>
       <div class="result-grid">
         <article class="hex-card">
           <div class="hex-symbol" id="finalHex"></div>
