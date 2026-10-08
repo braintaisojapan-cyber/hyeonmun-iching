@@ -72,6 +72,19 @@
           <div class="flow-card future"><small>변화 후의 흐름 · 변괘</small><div class="minihex" id="changedHex"></div><b id="changedName"></b><span id="changedText"></span></div>
         </div>
       </section>
+      <section class="plain-guide" aria-labelledby="plainGuideTitle">
+        <div class="plain-guide-head">
+          <span>쉽게 읽기</span>
+          <div><p>처음 보는 분을 위한 해설</p><h3 id="plainGuideTitle">이 괘가 말하는 핵심을 한눈에 보세요</h3></div>
+        </div>
+        <p class="plain-summary" id="plainSummary"></p>
+        <div class="plain-grid">
+          <article><small>왜 이런 뜻인가요?</small><b id="plainWhyTitle"></b><p id="plainWhy"></p></article>
+          <article class="do"><small>지금 하면 좋은 것</small><b id="plainDoTitle"></b><p id="plainDo"></p></article>
+          <article class="avoid"><small>지금 피할 것</small><b id="plainAvoidTitle"></b><p id="plainAvoid"></p></article>
+        </div>
+        <div class="reading-order"><b>읽는 순서</b><span><strong>① 본괘</strong> 지금의 상황</span><i>→</i><span><strong>② 변효</strong> 움직이는 지점</span><i>→</i><span><strong>③ 변괘</strong> 변화가 향하는 방향</span></div>
+      </section>
       <section class="deep-reading">
         <div class="section-title"><span>象</span><div><p>괘의 구조</p><h3>상괘와 하괘가 들려주는 흐름</h3></div></div>
         <div class="trigram-grid"><article><small>上卦 · 바깥의 흐름</small><b id="upperTri"></b><p id="upperMeaning"></p></article><article><small>下卦 · 내면의 바탕</small><b id="lowerTri"></b><p id="lowerMeaning"></p></article></div>
@@ -79,7 +92,8 @@
       </section>
       <section class="deep-reading">
         <div class="section-title"><span>占</span><div><p>분야별 해석</p><h3>질문을 현실에 비추어 보기</h3></div></div>
-        <div class="topic-grid"><article><span>일과 목표</span><p id="workReading"></p></article><article><span>관계와 소통</span><p id="relationReading"></p></article><article><span>재물과 생활</span><p id="moneyReading"></p></article><article><span>마음과 성장</span><p id="mindReading"></p></article></div>
+        <p class="counseling-lead" id="counselingLead"></p>
+        <div class="topic-grid"><article data-topic="work"><span>일과 목표</span><p id="workReading"></p></article><article data-topic="relation"><span>관계와 소통</span><p id="relationReading"></p></article><article data-topic="money"><span>재물과 생활</span><p id="moneyReading"></p></article><article data-topic="mind"><span>마음과 성장</span><p id="mindReading"></p></article></div>
       </section>
       <section class="deep-reading hidden" id="movingSection"><div class="section-title"><span>爻</span><div><p>변효 해석</p><h3>변화가 시작되는 자리</h3></div></div><div class="moving-list" id="movingList"></div></section>
       <section class="reflection"><p>오늘의 성찰 질문</p><blockquote id="reflectionQuestion"></blockquote><small>답을 서두르지 말고, 떠오르는 생각을 한 문장으로 적어보세요.</small></section>
